@@ -7,7 +7,9 @@
       <span class="iconfont search-icon">&#xe63c;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right"><span>{{this.city}}</span><span class="iconfont arow-icon">&#xe65c;</span></div>
+    <router-link to="/city">
+      <div class="header-right"><span>{{this.city}}</span><span class="iconfont arow-icon">&#xe65c;</span></div>
+    </router-link>
   </div>
 </template>
 
@@ -52,6 +54,7 @@ export default {
       width 1.24rem
       float right
       text-align center
+      color #fff
       .arow-icon
         position relative
         top .06rem

@@ -1,21 +1,18 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Home from '../pages/home'
+import City from '../pages/city/City'
 
-Vue.use(VueRouter)
+Vue.use(Router)
 
-const routes = [
-  {
+export default new Router({
+  routes: [{
     path: '/',
     name: 'Home',
     component: Home
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+  }, {
+    path: '/city',
+    name: 'City',
+    component: City
+  },]
 })
-
-export default router
