@@ -17,30 +17,8 @@
 <script>
   export default {
     name: "HomeRecommend",
-    data () {
-      return {
-        recommendList: [{
-          id: "001",
-          imgUrl: "https://imgs.qunarzz.com/sight/p0/1805/85/85c96c36663eeafea3.water.jpg_200x200_f6af6080.jpg",
-          title: "秦皇岛野生动物园",
-          desc: "这个季节去温度还是挺舒适的"
-        }, {
-          id: "002",
-          imgUrl: "https://imgs.qunarzz.com/sight/p0/1805/85/85c96c36663eeafea3.water.jpg_200x200_f6af6080.jpg",
-          title: "秦皇岛野生动物园",
-          desc: "这个季节去温度还是挺舒适的"
-        }, {
-          id: "003",
-          imgUrl: "https://imgs.qunarzz.com/sight/p0/1805/85/85c96c36663eeafea3.water.jpg_200x200_f6af6080.jpg",
-          title: "秦皇岛野生动物园",
-          desc: "这个季节去温度还是挺舒适的"
-        }, {
-          id: "004",
-          imgUrl: "https://imgs.qunarzz.com/sight/p0/1805/85/85c96c36663eeafea3.water.jpg_200x200_f6af6080.jpg",
-          title: "秦皇岛野生动物园",
-          desc: "这个季节去温度还是挺舒适的"
-        }, ]
-      }
+    props: {
+      recommendList: Array
     }
   }
 </script>
