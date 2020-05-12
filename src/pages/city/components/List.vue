@@ -57,7 +57,7 @@
     },
     computed: {
       ...mapState({
-        currentCity: city
+        currentCity: "city"
       })
     }
   }
