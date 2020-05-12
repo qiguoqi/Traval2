@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-// import store from './store'
+import store from './store'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './assets/styles/reset.css'
@@ -18,6 +18,7 @@ Vue.prototype.bus = new Vue();
 
 new Vue({
   el: '#app',
+  store,
   router,
   components: { App },
   template: '<App/>'
