@@ -13,7 +13,7 @@
             <div class="button-wrapper"><div class="button">北京</div></div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) in cities" :key="key">
+      <div class="area" v-for="(item, key) in cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list" v-for="innerItem in item" :key="innerItem.id">
           <div class="item border-bottom">{{innerItem.name}}</div>
@@ -29,10 +29,23 @@
     name: "CityList",
     props: {
       hot: Array,
-      cities: Object 
+      cities: Object
+    },
+    data () {
+      return {
+        letter: ""
+      }
     },
     mounted () {
-      this.scroll = new Bscroll(this.$refs.wrapper)
+      const _this = this;
+      this.scroll = new Bscroll(this.$refs.wrapper);
+      this.bus.$on("change", function(value) {
+        _this.letter = value;
+        if (_this.letter) {
+          const element = _this.$refs[_this.letter][0];
+          _this.scroll.scrollToElement(element);
+        }
+      })
     }
   }
 </script>
