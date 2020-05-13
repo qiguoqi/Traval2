@@ -28,19 +28,21 @@
     methods: {
       handleScroll () {
         const top = document.documentElement.scrollTop;
+        console.log("top",top);
         if (top > 60 && top < 140) {
           const opacity = top / 140;
           this.opacityStyle = {
             opacity
           }
           this.showAbs = false;
-        }
+        } 
         if (top < 60) {
           this.showAbs = true;
         }
       }
     },
     activated () {
+      console.log("activated");
       window.addEventListener("scroll", this.handleScroll)
     },
     deactivated () {
